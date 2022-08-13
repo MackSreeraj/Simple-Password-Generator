@@ -1,0 +1,30 @@
+import java.util.*;
+public class NewClass {
+	public static void main(String[] args) {
+		int length = 10;
+		System.out.println(geek_Password(length));
+	}
+        static char[] geek_Password(int len) 
+        {
+        System.out.println("Generating Password Using Random(): ");
+       
+        System.out.println("Your New Password is: ");
+        
+        String Capital_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String Small_chars   = "abcdefghijklmnopqrstuvwxyz";
+        String numbers       = "0123456789";
+        String symbols       = "!@#$%&*+/";
+        String values        = Capital_chars+Small_chars+numbers+symbols;
+        Random s             = new Random();
+        char[] password      = new char[len];
+        for(int i=0;i<len;i++) 
+        {
+        
+        	password[i]=values.charAt(s.nextInt(values.length()));
+        	
+        }
+        
+        return password;
+        
+        }
+}
